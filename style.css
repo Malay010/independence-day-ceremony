@@ -1,0 +1,83 @@
+:root{
+  --saffron:#FF9933;
+  --white:#FFFFFF;
+  --green:#138808;
+  --navy:#0b3c8c;
+  --pole:#7b5a3b;
+  --rope:#d9cbb3;
+  --sky1:#9ad7ff;
+  --sky2:#bfe7ff;
+  --sky3:#eaf7ff;
+  --soil:#5b3a1f;
+  --grass:#2f8a3b;
+  --uniform:#2a4d2b;
+  --uniform-dark:#203c21;
+  --skin:#f2c7a0;
+  --boot:#141414;
+}
+html,body{
+  height:100%;margin:0;
+  background:linear-gradient(var(--sky1),var(--sky2) 55%,var(--sky3));
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;
+  overflow:hidden;
+}
+#wrap{position:fixed;inset:0}
+canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.ui{
+  position:fixed;left:12px;bottom:12px;display:flex;gap:.5rem;flex-wrap:wrap;z-index:3
+}
+.ui button{
+  border:0;border-radius:999px;padding:8px 12px;background:#fff;
+  box-shadow:0 8px 24px rgba(0,0,0,.15);cursor:pointer
+}
+.ui button:active{transform:translateY(1px)}
+.badge{
+  position:fixed;right:12px;bottom:12px;z-index:3;
+  background:rgba(255,255,255,.85);backdrop-filter:blur(6px);
+  padding:6px 10px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.15);font-size:12px
+}
+
+.title{
+  position:fixed;top:14px;width:100%;text-align:center;z-index:3;
+  font-weight:800;font-size:clamp(20px,4vw,36px);letter-spacing:.5px;color:#0e1420;
+  text-shadow:0 2px 12px rgba(0,0,0,.15)
+}
+.subtitle{
+  display:block;margin-top:4px;font-weight:500;font-size:clamp(12px,2.6vw,18px);color:#1d2a3a
+}
+#startCeremony{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  padding:16px 24px;
+  font-size:18px;
+  z-index:10;
+  background:#fff;
+  border:0;
+  border-radius:12px;
+  box-shadow:0 4px 20px rgba(0,0,0,.2);
+  cursor:pointer;
+}
+/* NEW: CSS for the August 15th detail box */
+.august-info-right {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 280px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  color: #333;
+  z-index: 3;
+  line-height: 1.5;
+}
+
+.august-info-right h3 {
+  margin-top: 0;
+  color: #d9534f;
+  margin-bottom: 10px;
+}
